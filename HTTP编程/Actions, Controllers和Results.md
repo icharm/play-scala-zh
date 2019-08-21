@@ -1,6 +1,6 @@
-##Actions, Controllers和Results
+## Actions, Controllers和Results
 
-####什么是Action?
+### 什么是Action?
 
 Play应用收的大多数请求会被`Action`处理。
 
@@ -14,9 +14,7 @@ def echo = Action { request =>
 
 一个`Action`返回一个`play.api.mvc.Result`对象，表示要发送给web客户端的HTTP响应，在上例中`Ok`会构造一个响应体为**text/plain**的**200 OK**响应。
 
-
-
-#### 编写Action
+### 编写Action
 
 在任何扩展`BaseController`的控制器中，`Action`是默认的构建器。此构建器包含一些用于创建action对象的帮助程序。
 
@@ -61,9 +59,7 @@ Action(parse.json) { implicit request =>
 
 Body解析器将在本手册的后面部分介绍。现在，只需要知道创建Action方法的其他方式使用默认的**Any content body parser**。
 
-
-
-#### 控制器其实是action生成器
+### 控制器其实是action生成器
 
 Play中的控制器只不过是一个生成Action方法的对象。控制器通常被定义为可以依赖注入( [Dependency Injection](https://www.playframework.com/documentation/2.7.x/ScalaDependencyInjection))的类。
 
@@ -95,9 +91,7 @@ def hello(name: String) = Action {
 }
 ```
 
-
-
-#### 简单的Results
+#### ### 简单的Results
 
 现在我们只关注简单的Result：一个HTTP响应result，携带着响应码、头信息和响应体发送给Web客户端。
 
@@ -135,9 +129,7 @@ val anyStatus    = Status(488)("Strange response type")
 
 所有的助手代码都可以在`play.api.mvc.Results` trait和companion object 里找到。
 
-
-
-#### 重定向也是简单results
+### 重定向也是简单results
 
 将浏览器定向到一个新的URL是另外一种简单Result形式，尽管这些Result不携带响应体。
 
@@ -157,9 +149,7 @@ def index = Action {
 }
 ```
 
-
-
-#### `TODO`虚拟页面
+### `TODO`虚拟页面
 
 你可以创建一个定义为`TODO`的空`Action`实现，结果会返回一个标准的'Not implemented yet'的页面:
 

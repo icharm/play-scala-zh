@@ -2,9 +2,7 @@
 
 Play 使用 [Typesafe config library](https://github.com/lightbend/config)，但是Play提供了优雅的包装类` Configuration`，支持更多Scala高级特性。 如果你对Typesafe配置不是很熟悉，可以先阅读这篇文章[configuration file syntax and features](https://www.playframework.com/documentation/2.7.x/ConfigFile)。
 
-
-
-####访问配置(Accessing the configuration)
+### 访问配置(Accessing the configuration)
 
 通常，你可以通过依赖注入([Dependency Injection](https://www.playframework.com/documentation/2.7.x/ScalaDependencyInjection))获得`Configuration`对象，或者简单的在组件间传递`Configuration`实例。
 
@@ -40,9 +38,7 @@ config.get[Seq[String]]("listOfFoos")
 config.getAndValidate[String]("foo", Set("bar", "baz"))
 ```
 
-
-
-####配置加载器(ConfigLoader)
+### 配置加载器(ConfigLoader)
 
 通过自定义[`ConfigLoader`](https://www.playframework.com/documentation/2.7.x/api/scala/play/api/ConfigLoader.html)，可以很轻松地将配置转换为自定义类型。
 
@@ -74,9 +70,7 @@ object AppConfig {
 config.get[AppConfig]("app.config")
 ```
 
-
-
-####可选的配置键(Optional configuration keys)
+### 可选的配置键(Optional configuration keys)
 
 Play的`Cofiguration`支持获取可选的配置键，通过使用`getOptional[A]`方法。和`get[A]`类似，但是如果键名不存在会返回`None`。我们建议您不要使用此方法，而是在配置文件中将可选键设置为`null`并使用`get [Option [A]]`。但是，为了方便您需要与以非标准方式使用配置信息，我们提供此方法。
 
