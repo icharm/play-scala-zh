@@ -91,7 +91,7 @@ def hello(name: String) = Action {
 }
 ```
 
-#### ### 简单的Results
+### 简单的Results
 
 现在我们只关注简单的Result：一个HTTP响应result，携带着响应码、头信息和响应体发送给Web客户端。
 
@@ -159,7 +159,7 @@ def index(name: String) = TODO
 
 
 
-
+原文 [Actions, Controllers and Results](https://www.playframework.com/documentation/2.7.x/ScalaActions)
 
 
 

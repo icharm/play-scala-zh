@@ -76,4 +76,5 @@ Play的`Cofiguration`支持获取可选的配置键，通过使用`getOptional[A
 
 
 
-下一章：HTTP编程
+原文 [The Scala Configuration API](https://www.playframework.com/documentation/2.7.x/ScalaConfig)
+
